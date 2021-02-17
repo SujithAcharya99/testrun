@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Student-Management App</title>
+  <link rel="stylesheet" href="/css/styles.css">
+
+
+</head>
+
+<body>
+  <div class="main-content">
+    {{>header}}
+    <h1>Create New Student</h1>
+    <form action="/student" method="POST">
+      <label>Name</label>
+      <input id="name" type="text" name="name" placeholder="Name" value={{student.name}} required>
+      <label>Email </label>
+      <input id="email" type="text" name="email" placeholder="email" value={{student.email}} required>
+      <label>Password </label>
+      <input id="password" type="text" name="password" placeholder="password" required>
+      <label>Roll </label>
+      <input id="roll" type="text" name="roll" placeholder="roll" value={{student.roll}} required>
+      <label>Age </label>
+      <input id="age" type="text" name="age" placeholder="age" value={{student.age}} required>
+      <label>Subject </label>
+      <select name="subject" id="subject">
+        <option value="Not assigned">Not assigned</option>
+        <option value="Java">Java</option>
+        <option value="C Program">C Program</option>
+        <option value="Python">Python</option>
+        <option value="Node js">Node js</option>
+        <option value="Machine Learining">Machine Learining</option>
+        <option value="Javascript">Javascript</option>
+
+      </select>
+
+      <button type="submit">SUBMIT</button>
+    </form>
+
+    {{>footer}}
+  </div>
+</body>
+
+</html>

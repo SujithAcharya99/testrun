@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/photo/logo.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-6 offset-md-3" style="background-color: #fff;margin-top: 25px;padding:20px;">
+        {{>header}}
+        <h3>Name: {{student.name}}</h3>
+        <form action="/test/data/{{student._id}}" method="post">
+          <div>
+            {{#each testdata.questions}}
+            <h3>{{this.mcq_question}} </h3>
+            {{#each this.options}}
+            <input type="radio" name="{{this}}" value="{{this}}">
+            <label for="module.expose">{{this}}</label><br>
+            {{/each}}
+            {{/each}}
+          </div>
+          {{!-- 
+        {{#each ../ar}}
+        {{!-- <h3>{{this}}</h3> --}}
+          {{!-- 
+        <input type="radio" name="{{index}}" value="{{this}}">
+        <label for="module.expose">{{this}}</label><br> --}}
+          {{!-- <input type="radio" id="b1" name="b1" value="module">
+        <label for="module">{{this}}</label><br>
+        <input type="radio" id="c1" name="c1" value=" module.exports">
+        <label for=" module.exports">{{this}}</label>
+        <input type="radio" id="d1" name="d1" value="All of the above">
+        <label for="All of the above">{{this}}</label> --}}
+
+          {{!-- {{/each}}  --}}
+          {{!-- {{/each}}  --}}
+
+          {{!-- <div>
+        <h3>2 Which statement executes the code of sample.js file?</h3>
+        <input type="radio" id="a2" name="a2" value="nodejs sample.js">
+        <label for="nodejs sample.js">nodejs sample.js</label><br>
+        <input type="radio" id="b2" name="b2" value="node sample.js">
+        <label for="node sample.js">node sample.js</label><br>
+        <input type="radio" id="c2" name="c2" value=" sample.js">
+        <label for=" sample.js">sample.js</label>
+        <input type="radio" id="d2" name="d2" value="None of the above">
+        <label for="None of the above">None of the above</label>
+        </div> --}}
+
+          {{!-- <div>
+        <h3>3 What is REPL in Node.js?</h3>
+        <input type="radio" id="a3" name="a3" value="Eval">
+        <label for="Eval">Eval</label><br>
+        <input type="radio" id="b3" name="b3" value="Print">
+        <label for="Print">Print</label><br>
+        <input type="radio" id="c3" name="c3" value="Loop">
+        <label for="Loop"> Loop</label>
+        <input type="radio" id="d3" name="d3" value="All of these">
+        <label for="All of these">All of these</label>
+        </div> --}}
+          <input type="submit" value=" submit " style="font-size:12pt;color:white;background-color:green;padding:6px">
+        </form>
+        {{>footer}}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

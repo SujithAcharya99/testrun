@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student-Management App</title>
+       <link rel="icon" href="/photo/logo.png">
+     <link rel="stylesheet" href="/css/styles.css">
+    
+
+</head>
+<body>
+       <div class="main-content">
+         {{!-- {{>header}} --}}
+         <h3>Teacher Login</h3>
+        
+                 <form action="/login/teacher" method="POST">
+                    <label >Email </label>
+                    <input id="email" type="text" name="email" placeholder="email" required>
+                    <label >Password </label>
+                    <input id="password" type="text" name="password" placeholder="password" required>
+
+                    <button type="submit" >SUBMIT</button>
+                </form>
+    
+
+     {{>footer}}
+     </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student-Manager-App</title>
+     <link rel="icon" href="/photo/logo.png">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+
+    <div class="main-content">
+
+         {{>header}}
+    
+<h1>Student List</h1>
+{{!-- <h3><a class="btn btn-secondary" href="/users"><i class="fa fa-plus"></i> Create New</a> Users List</h3> --}}
+
+<table class="table table-striped">
+    {{!-- <p hidden id="managerId">MANAGER ID {{admin}}</p> --}}
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Roll</th>
+            <th>Age</th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each user}}
+        
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.roll}}</td>
+            <td>{{this.age}}</td>
+            <td>
+                 <a href="/teacher/userEdit/{{this._id}} "  style="color: black;">Edit</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<a class="btn btn-secondary" href="/" style="color: rgb(0, 0, 0);">Logout</a>
+
+
+    </div>
+     {{>footer}}
+   <!-- <p>Created by {{name}}</p> -->
+</body>
+
+</html>

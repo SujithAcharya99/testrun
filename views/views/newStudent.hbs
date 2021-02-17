@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student-Management App</title>
+     <link rel="stylesheet" href="/css/styles.css">
+    
+
+</head>
+<body>
+       <div class="main-content">
+         {{>header}}
+    <h1>Create New Student</h1>
+                 <form action="/student" method="POST">
+                    <label >Name</label>
+                    <input id="name" type="text" name="name" placeholder="Name" required>
+                    <label >Email </label>
+                    <input id="email" type="text" name="email" placeholder="email" required>
+                    <label >Password </label>
+                    <input id="password" type="text" name="password" placeholder="password" required>
+                    <label >Roll </label>
+                    <input id="roll" type="text" name="roll" placeholder="roll" required>
+                    <label >Age </label>
+                    <input id="age" type="text" name="age" placeholder="age" required>
+                    <label >Subject </label>
+                    <input id="age" type="text" name="subject" placeholder="age" required>
+
+                    <button type="submit" >SUBMIT</button>
+                </form>
+
+     {{>footer}}
+     </div>
+</body>
+
+</html>

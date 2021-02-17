@@ -1,0 +1,16 @@
+# serverless.yml
+
+service: studentapp
+
+provider:
+  name: aws
+  runtime: nodej10.23
+  stage: test
+  region: eu-central-1
+
+functions:
+  app:
+    handler: src/index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'

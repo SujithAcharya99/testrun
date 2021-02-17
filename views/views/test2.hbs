@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Student App</title>
+<link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="bg-info">
+    
+    <div class="row">
+         <div class="col-md-6 offset-md-3" style="background-color: #fff;margin-top: 25px;padding:20px;">
+    
+    <h1>Student Dashboard</h1>
+<h3> Student Profile</h3> 
+<h3><a class="btn btn-secondary" href="/student/exam/{{student.id}}"><i class="fa fa-book"></i>Take Test</a></h3>
+<table class="table.table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Roll</th>
+            <th>Age</th>
+            <th>Subject</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each student}}
+        
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.roll}}</td>
+            <td>{{this.age}}</td> 
+            <td>{{this.subject}}</td> 
+        </tr>
+        {{/each}}
+        
+    </tbody>
+    </table>
+    <a class="btn btn-secondary" href="/" style="color: rgb(0, 0, 0);">Logout</a>
+    </div>
+  
+</div>
+</body>
+
+</html>

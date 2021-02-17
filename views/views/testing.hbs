@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Student-Management App</title>
+	<link rel="icon" href="/photo/logo.png">
+	<link rel="stylesheet" href="/css/radial.css">
+</head>
+
+<body>
+	<div id="wrapper" class="center">
+		<svg class="progress blue noselect" data-progress="{{score}}" x="0px" y="0px" viewBox="0 0 80 80">
+			<path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
+			<path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
+			<text class="value" x="50%" y="55%">0%</text>
+			<ul>
+				<a href="/student/dashboard/"> <button type="button" class="btn btn-lg btn-block  btn-custom ">Go To
+						Dashboard</button></a>
+			</ul>
+		</svg>
+	</div>
+	<script type="text/javascript">
+
+		var forEach = function (array, callback, scope) {
+			for (var i = 0; i < array.length; i++) {
+				callback.call(scope, i, array[i]);
+			}
+		};
+		window.onload = function () {
+			var max = -219.99078369140625;
+			forEach(document.querySelectorAll(".progress"), function (index, value) {
+				percent = value.getAttribute("data-progress");
+				value
+					.querySelector(".fill")
+					.setAttribute(
+						"style",
+						"stroke-dashoffset: " + ((100 - percent) / 100) * max
+					);
+				value.querySelector(".value").innerHTML = percent + "%";
+			});
+		};
+
+	</script>
+</body>
+
+</html>

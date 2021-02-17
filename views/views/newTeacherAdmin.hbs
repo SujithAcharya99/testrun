@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student-Management App</title>
+     <link rel="stylesheet" href="/css/styles.css">
+    
+
+</head>
+<body>
+       <div class="main-content">
+         {{>header}}
+    <h1>Create New Teacher</h1>
+                 <form action="/teacher" method="POST">
+                    <label >Name</label>
+                    <input id="name" type="text" name="name" placeholder="Name" value={{teacher.name}} required>
+                    <label >Email </label>
+                    <input id="email" type="text" name="email" placeholder="email" value={{teacher.email}} required>
+                    <label >Password </label>
+                    <input id="password" type="text" name="password" placeholder="password"  required>
+                     <label >age </label>
+                    <input id="age" type="text" name="age" placeholder="age" value={{teacher.age}} required>
+                    <label >roll </label>
+                    <input id="roll" type="text" name="roll" placeholder="roll" value={{teacher.roll}} required>
+                   
+                    <label >Subject Taught </label>
+                    <input id="Subject" type="text" name="subjects_taught" placeholder="Subject" required>
+
+                    <button type="submit" >SUBMIT</button>
+                </form>
+
+     {{>footer}}
+     </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Student-Manager App</title>
+  <link rel="icon" href="/photo/logo.png">
+  <link rel="stylesheet" href="/css/styles.min.css">
+  <style>
+    a:link,
+    a:visited {
+      background-color: rgb(170, 191, 194);
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      width: 50%;
+    }
+
+    a:hover,
+    a:active {
+      background-color: gray;
+    }
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+</head>
+
+<body>
+  <div class="centered-form">
+    <div class="centered-form__box">
+      <h1>Join</h1>
+      <form action="/chat.html">
+        <h4>{{userdata.name}}</h4>
+        <h4>{{userdata.email}}</h4>
+        <h4>{{roll}}</h4>
+        <h4><a style="text-decoration:none" href="#">Create Group</a></h4>
+        <h4><a style="text-decoration:none" href="#">Group Chat</a></h4>
+
+        <h4 id="demo"></h4>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#users_data}}
+            <tr>
+              <td><a style="text-decoration:none" href="/chat_list/{{../userid}}&{{this.id}}&{{../roll}}">{{this.name}}</a></td>
+            </tr>
+            {{/users_data}}
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

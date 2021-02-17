@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student-Management App</title>
+     <link rel="stylesheet" href="/css/styles.css">
+    
+
+</head>
+<body>
+       <div class="main-content">
+         {{>header}}
+    <h1>Create New Course</h1>
+                 <form action="/course" method="POST">
+                    <label >studentName</label>
+                    <input id="studentName" type="text" name="studentName" placeholder="studentName" required>
+                    <label >subject </label>
+                    <input id="subject" type="text" name="subject" placeholder="subject" required>
+                    <label >teacherName </label>
+                    <input id="teacherName" type="text" name="teacherName" placeholder="teacherName" required>
+                    <button type="submit" >SUBMIT</button>
+                </form>
+
+     {{>footer}}
+     </div>
+</body>
+
+</html>

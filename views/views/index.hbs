@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Student-Manager App</title>
+  <link rel="icon" href="/photo/logo.png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="bg-info">
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-6 offset-md-3" style="background-color: #fff;margin-top: 25px;padding:20px;">
+
+        {{!-- {{>header}} --}}
+        {{!-- <h3>Login as</h3>
+         <a href="/login/admin"><button class="btn"><h2>Admin Login</h2></button></a>
+         <a href="/login/teacher"><button class="btn"><h2>Teacher Login</h2></button></a>
+         <a href="/login/student"><button class="btn"><h2>Student Login</h2></button></a> --}}
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+          <label>Email </label>
+          <input id="email" type="text" name="email" placeholder="email" required>
+          <label>Password </label>
+          <input id="password" type="text" name="password" placeholder="password" required>
+          <button type="submit">SUBMIT</button>
+        </form>
+        <h2>Sign up</h2>
+        <form action="/signup" method="POST">
+          <label>Name</label>
+          <input id="name" type="text" name="name" placeholder="Name" required>
+          <label>age </label>
+          <input id="age" type="text" name="age" placeholder="age" required>
+          <label>Email </label>
+          <input id="email" type="text" name="email" placeholder="email" required>
+          <label>Password </label>
+          <input id="password" type="text" name="password" placeholder="password" required>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+</body>
+
+</html>
